@@ -17,10 +17,17 @@
 ` pip install langreact`
 
 ### build your application
-参考 demo 目录中的 create_qwen_chat_configure.py 和 create_a_chatbot.py
+参考 demo 目录中的 create_a_chatbot.py 创建一个 COT Planning 辅助的聊天机器人
+执行这个 demo：
+`DASHSCOPE_API_KEY=XXXX python3 -m demo.create_a_chatbot`
 
-create_a_chatbot.py 创建一个 COT Planning 辅助的聊天机器人
-create_qwen_chat_configure.py 应用的全局配置，包括 memory 服务器、PROMPT 等
+创建和使用一个应用的基本流程：
+1. 继承 ApplicationPlugin 创建一个自己的 LLM 应用
+2. 从 demo 中拷贝 default.py 来创建一个新的应用配置文件，例如 demo/qwen_chat_configure.py
+3. 修改配置中的 MEMORY_INDEX_URI 来引入你的日志 RAG 索引，如果仅仅测试可以执行 demo/simple_milvus_server 中的 start_default_server 方法，创建一个临时的索引
+4. （可选）根据需要修改配置中的 PROMPT 来定制你自己的 planning agent
+5. 通过 Flow 创建应用的数据流，赋予你的 LLM 应用 Planning 能力
+6. 通过 Flow.invoke 来调用你的 LLM 应用
 
 # RoadMap
 
@@ -31,3 +38,4 @@ create_qwen_chat_configure.py 应用的全局配置，包括 memory 服务器、
 # Contact
 
 max_and_min@163.com
+

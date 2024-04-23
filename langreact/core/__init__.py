@@ -1,7 +1,8 @@
 import logging
+import logging.config
 import os
 if 'LANGREACT_LOGGING_CONF' not in os.environ:
     _path = os.path.dirname(__file__)
-    logging.basicConfig(filename=os.path.join(_path,'configure','logging.conf'),level=logging.INFO)
+    logging.config.fileConfig(fname=os.path.join(_path,'configure','logging.conf'))
 else:
-    logging.basicConfig(filename=os.environ['LANGREACT_LOGGING_CONF'])
+    logging.config.fileConfig(fname=os.environ['LANGREACT_LOGGING_CONF'])

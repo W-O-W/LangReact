@@ -23,6 +23,7 @@ class EncodeModel:
 
 class MemoryIndex:
     def __init__(self,config, encoder_model: EncodeModel = None, **kwargs) -> None:
+        logging.info("connect to milvus:{},client params:{}".format(config.MEMORY_INDEX_URI,kwargs))
         self.client = MilvusClient(uri=config.MEMORY_INDEX_URI, **kwargs)
         self.encode_model = encoder_model
         self.config = config
