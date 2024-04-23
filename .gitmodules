@@ -1,0 +1,6 @@
+[submodule "applications"]
+	path = applications
+	url = https://github.com/W-O-W/langreact-applications.git
+[submodule "plugins"]
+	path = plugins
+	url = https://github.com/W-O-W/langreact-plugins.git

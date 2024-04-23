@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "langreact"
+version = "0.2.8"
+description = "LangReact Project"
+authors = ["zhangli <max_and_min@163.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "langreact", format = "wheel" },
+    { include = "langreact", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.1.16"
+openai = "^1.23.2"
+milvus = "2.3.5"
+requests = "^2.31.0"
+dashscope = "^1.17.1"
+pymilvus = "^2.4.0"
+sentence-transformers = "^2.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
