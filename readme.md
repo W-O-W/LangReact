@@ -5,7 +5,7 @@
 
 ## 🤔 What is LangReact?
 
-**LangReact** 是一个配置化的 Planning Agent 应用开发工具，通过配置、插件能快速为你的 GPT 应用提供 Planning 能力。
+**LangReact** 是一个配置化的 Planning Agent 应用开发工具，通过配置和插件能快速为你的 GPT 应用提供 Planning 能力。
 - **配置化**: 通过 configure 快速构建你的 Planning Agent，无需对你的 AI 应用代码做任何更改
 - **插件化**: 通过引入各种各样的工具插件，让你的 AI 应用快速具备使用工具的能力
 - **多种 Planning Agent 实现**: 通过配置开启多种 Planning 功能：COT、Memory RAG、TOT、Reflection 等
