@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "langreact"
-version = "0.2.8"
+version = "0.3.0"
 description = "LangReact Project"
 authors = ["zhangli <max_and_min@163.com>"]
 license = "MIT"
